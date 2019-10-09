@@ -1,0 +1,54 @@
+header { grid-area: header; }
+nav { grid-area: menu; }
+article { grid-area: main; }
+section { grid-area: section; }
+aside { grid-area: info; }
+footer { grid-area: footer; }
+
+
+@media screen and (min-width: 480px){
+  body{
+  background-image: url("lappiravintola/tekstuuri.jpg");
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'info menu menu menu menu menu'
+       'info section section section section section'
+       'main main main main main main'
+      'footer footer footer footer footer footer';
+    grid-gap: 10px;
+    background-color: rgba(172, 226, 222, 0.863);
+    padding: 10px;
+    text-align: center;
+  }
+   section{
+     background-color: rgba(199, 234, 236, 0.815); 
+     text-align: center;
+   }  
+   article{
+    background-color: rgba(199, 234, 236, 0.815); 
+  }  
+  aside { background-color: rgba(199, 234, 236, 0.815);  }
+  footer { background-color: rgba(199, 234, 236, 0.815);  }
+  @media screen ( min-width : 320px ) and (max-width: 480px){
+    body {
+      display: flex;
+      flex-direction: column;
+      background-color: #3196F3;
+      padding: 3px;
+      font-size: 10px;
+      }
+  
+    aside {
+      display: none;
+    }
+  }
+ @media screen ( min-width : 0px) and ( max-width : 320px ) {
+ body {
+     width : 320px;
+    }
+    
+ }
+     
+ } 
